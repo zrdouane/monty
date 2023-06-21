@@ -63,7 +63,7 @@ void rotr(_stack_t **node, unsigned int compter)
 	_stack_t *temp = *node;
 	int number;
 	(void)compter;
-	if (node == NULL || *node != NULL || (*node)->next == NULL)
+	if (node == NULL || *node == NULL || (*node)->next == NULL)
 	{
 		return;
 	}

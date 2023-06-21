@@ -45,8 +45,10 @@ _stack_t *add_node(_stack_t **node, const int number)
 	}
 
 	new_node->n = number;
+	new_node->prev = NULL;
 	new_node->next = *node;
-
+	if (*node != NULL)
+		(*node)->prev = new_node;
 	*node = new_node;
 
 	return (new_node);
